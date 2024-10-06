@@ -16,7 +16,7 @@
 #define NAV 2
 #define QNAV 3
 #define SWE 4
-#defint CODING 5
+#define CODING 5
 
 / {
         keymap {
@@ -55,7 +55,7 @@
                    >;
                };
                
-                nav_layer {
+               nav_layer {
                    // -----------------------------------------------------------------------------------------
                    // |      |     |     |     |     |     |   |     |     | UP  |     |     |      |
                    // |      |     |     |     |     |     |   |     | LEFT| DOWN|RIGHT|     |      |
