@@ -15,6 +15,7 @@
 #define SIGNS 1
 #define NAV 2
 #define QNAV 3
+#define CODING 4
 
 / {
         keymap {
@@ -24,7 +25,7 @@
                    display-name = "Base";
                    bindings = <
                        &kp ESC    &kp Q      &kp W          &kp E          &kp R       &kp T           &kp Y      &kp U      &kp I   &kp O       &kp P     &kp BSPC
-                       &kp TAB    &kp A      &kp S          &lt QNAV D     &lt NAV F   &kp G           &kp H      &kp J      &kp K   &kp L       &kp SEMI  &kp RET 
+                       &kp TAB    &kp A      &lt CODING S   &lt QNAV D     &lt NAV F   &kp G           &kp H      &kp J      &kp K   &kp L       &kp SEMI  &kp RET 
                        &kp LSHFT  &trans     &kp Z          &kp X          &kp C       &kp V           &kp B      &kp N      &kp M   &kp COMMA   &kp DOT   &kp MINUS
                                                             &kp LCTRL      &kp LALT    &kp LGUI        &kp SPACE  &lt SIGNS  &kp RET 
                    >;
@@ -75,5 +76,20 @@
                                                 &trans     &trans      &trans      &trans         &trans      &trans
                    >;
                };
+       
+              swedish_layer {
+                 // -----------------------------------------------------------------------------------------
+                 // |      |     |     |     |     |     |   |     |     |     |     |     |  Å   |
+                 // |      |     |     |     |     |     |   |     |     |     |     |  Ö  |  Ä   |
+                 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
+                 //                    |     |     |     |   |     |     |     |
+                 display-name = "Swedish layer";
+                 bindings = <
+                     &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &sv_ao
+                     &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &sv_oe      &sv_ae
+                     &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &trans
+                                             &trans      &trans      &trans      &trans         &trans      &trans
+                 >; 
+              };
         };
 };
