@@ -16,6 +16,7 @@
 #define NAV 2
 #define QNAV 3
 #define SWE 4
+#define CODING 5
 
 / {
         keymap {
@@ -33,7 +34,7 @@
                        &kp ESC    &kp Q      &kp W       &kp E          &kp R      &kp T       &kp Y      &kp U  &kp I  &kp O      &kp P     &kp BSPC
                        &kp TAB    &lt SWE S  &lt QNAV D  &lt NAV F      &kp G      &kp H       &kp J  &kp K  &kp L      &kp SEMI  &kp RET
                        &kp LSHFT  &trans     &kp Z       &kp X          &kp C      &kp V       &kp B      &kp N  &kp M  &kp COMMA  &kp DOT   &kp MINUS
-                                                         &kp LCTRL      &kp LALT   &kp LGUI    &kp SPACE  &lt SIGNS  &lt 5
+                                                         &kp LCTRL      &kp LALT   &kp LGUI    &kp SPACE  &lt SIGNS  &lt CODING
                    >;
                };
                  
@@ -99,19 +100,19 @@
                    >; 
                };
                
-               swedish_layer2 {
-                      // -----------------------------------------------------------------------------------------
-                      // |      |     |     |     |     |     |   |     |     |     |     |     |     |
-                      // |      |     |     |     |     |     |   |     |     |     |     |     |     |
-                      // |      |     |     |     |     |     |   |     |     |     |     |     |      |
-                      //                    |     |     |     |   |     |     |     |
-                      display-name = "Swe2";
-                      bindings = <
-                          &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &trans
-                          &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &trans
-                          &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &trans
-                                                  &trans      &trans      &trans      &trans         &trans      &trans
-                      >; 
-                  };
+               coding_layer {
+                  // -----------------------------------------------------------------------------------------
+                  // |      |     |     |     |     |     |   |     |     |     |     |     |  Å   |
+                  // |      |     |     |     |     |     |   |     |     |     |     |  Ö  |  Ä   |
+                  // |      |     |     |     |     |     |   |     |     |     |     |     |      |
+                  //                    |     |     |     |   |     |     |     |
+                  display-name = "Coding";
+                  bindings = <
+                      &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &sv_ao
+                      &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &sv_oe      &sv_ae
+                      &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &trans
+                                              &trans      &trans      &trans      &trans         &trans      &trans
+                  >; 
+               };
         };
 };
