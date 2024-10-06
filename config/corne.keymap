@@ -13,7 +13,7 @@
 
 #define BASE 0
 #define SIGNS 1
-#define DEV_SIGNS 2
+#define DEV 2
 #define NAV 3
 #define QNAV 4
 #define SWE 5
@@ -34,7 +34,7 @@
                        &kp ESC    &kp Q   &kp W       &kp E      &kp R      &kp T       &kp Y      &kp U  &kp I  &kp O      &kp P     &kp BSPC
                        &kp TAB    &kp A   &kp S       &kp D      &kp F      &kp G       &kp H      &kp J  &kp K  &kp L      &kp SEMI  &kp RET
                        &kp LSHFT  &trans  &kp Z       &kp X      &kp C      &kp V       &kp B      &kp N  &kp M  &kp COMMA  &kp DOT   &kp MINUS
-                                                      &kp LCTRL  &kp LALT   &kp LGUI    &kp SPACE  &lt SIGNS  &lt DEV_SIGNS
+                                                      &kp LCTRL  &kp LALT   &kp LGUI    &kp SPACE  &lt SIGNS  &lt DEV
                    >;
                };
                  
