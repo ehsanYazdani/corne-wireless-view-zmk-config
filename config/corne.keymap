@@ -24,10 +24,10 @@
 
                default_layer {
                            // -----------------------------------------------------------------------------------------
-                           // | ESC  |  Q  |  W  |  E     |  R    |  T  |   |  Y  |  U    |  I  |  O  |  P  | BKSP |
-                           // | TAB  |  A  |  S  | QNAV/D | NAV/F |  G  |   |  H  |  J    |  K  |  L  |     | ENT  |
-                           // | SHFT |  Z  |  Z  |  X     |   C   |  V  |   |  B  |  N    |  M  |  ,  |  .  |  -   |
-                           //                    | CTRL   |  ALT  | GUI |   | SPC | SIGNS | DEV |
+                           // | ESC  |  Q  |  W  |  E     |  R    |  T  |   |  Y  |  U  |  I  |  O  |  P  | BKSP |
+                           // | TAB  |  A  |  S  | QNAV/D | NAV/F |  G  |   |  H  |  J  |  K  |  L  |     | ENT  |
+                           // | SHFT |  Z  |  Z  |  X     |   C   |  V  |   |  B  |  N  |  M  |  ,  |  .  |  -   |
+                           //                    | CTRL   |  ALT  | GUI |   | SPC | LWR | RSE |
                
                    display-name = "Base";
                    bindings = <
@@ -65,9 +65,9 @@
                
                    display-name = "Dev";
                    bindings = <
-                       &trans  &trans   &trans  &trans   &trans   &trans       &kp LPAR   &kp RPAR   &kp KP_MULTIPLY  &trans  &trans  &trans
-                       &trans  &trans   &trans  &trans   &trans   &trans       &kp LBRC   &kp RBRC   &trans           &trans  &trans  &trans
-                       &trans  &trans   &trans  &trans   &trans   &trans       &kp LBKT   &kp RBKT   &trans           &trans  &trans  &trans
+                       &trans  &trans   &trans  &trans   &trans   &trans       &kp LPAR   &kp RPAR   &kp KP_MULTIPLY  &kp TILDE &kp CARET  &kp BSPC
+                       &trans  &trans   &trans  &trans   &trans   &trans       &kp LBRC   &kp RBRC   &trans           &kp FSLH  &kp BSLH   &kp GRAVE
+                       &trans  &trans   &trans  &trans   &trans   &trans       &kp LBKT   &kp RBKT   &trans           &trans    &kp PIPE   &kp SQT
                                                 &trans   &trans   &trans       &trans     &trans     &trans
                                >;
                        };
