@@ -50,14 +50,14 @@
                
                 nav_layer {
                    // -----------------------------------------------------------------------------------------
-                   // |      |     |     |     |     |     |   |     |     | UP  |     |     |      |
-                   // |      |     |     |     |     |     |   |     | LEFT| DOWN|RIGHT|     |      |
-                   // |      |     |     |     |     |     |   |     |     |     |     |     |      |
+                   // |      |     |     |     |     |     |   |     |     | UP  |     |     |  Å  |
+                   // |      |     |     |     |     |     |   |     | LEFT| DOWN|RIGHT|  Ö  |  Ä  |
+                   // |      |     |     |     |     |     |   |     |     |     |     |     |     |
                    //                    |     |     |     |   |     |     |     |
                    display-name = "Navigation";
                    bindings = <
-                       &trans      &trans      &trans      &trans      &trans      &trans     &trans     &trans      &kp UP     &trans      &trans      &trans
-                       &trans      &trans      &trans      &trans      &trans      &trans     &trans     &kp LEFT    &kp DOWN   &kp RIGHT   &trans      &trans
+                       &trans      &trans      &trans      &trans      &trans      &trans     &trans     &trans      &kp UP     &trans      &trans      &sv_ao
+                       &trans      &trans      &trans      &trans      &trans      &trans     &trans     &kp LEFT    &kp DOWN   &kp RIGHT   &sv_oe      &sv_ae
                        &trans      &trans      &trans      &trans      &trans      &trans     &trans     &trans      &trans     &trans      &trans      &trans
                                                 &trans     &trans      &trans      &trans     &trans     &trans
                    >;
@@ -91,21 +91,6 @@
                        &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &trans
                                                &trans      &trans      &trans      &trans         &trans      &trans
                    >; 
-               };
-               
-               coding_layer {
-                  // -----------------------------------------------------------------------------------------
-                  // |      |     |     |     |     |     |   |     |     |     |     |     |  Å   |
-                  // |      |     |     |     |     |     |   |     |     |     |     |  Ö  |  Ä   |
-                  // |      |     |     |     |     |     |   |     |     |     |     |     |      |
-                  //                    |     |     |     |   |     |     |     |
-                  display-name = "Coding";
-                  bindings = <
-                      &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &sv_ao
-                      &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &sv_oe      &sv_ae
-                      &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &trans
-                                              &trans      &trans      &trans      &trans         &trans      &trans
-                  >; 
                };
         };
 };
