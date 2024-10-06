@@ -22,18 +22,12 @@
                 compatible = "zmk,keymap";
 
                default_layer {
-                           // -----------------------------------------------------------------------------------------
-                           // | ESC  |  Q  |  W  |  E     |  R    |  T  |   |  Y  |  U  |  I  |  O  |  P  | BKSP |
-                           // | TAB  |  A  |  S  | QNAV/D | NAV/F |  G  |   |  H  |  J  |  K  |  L  |     | ENT  |
-                           // | SHFT |  Z  |  Z  |  X     |   C   |  V  |   |  B  |  N  |  M  |  ,  |  .  |  -   |
-                           //                    | CTRL   |  ALT  | GUI |   | SPC | LWR | RSE |
-               
                    display-name = "Base";
                    bindings = <
-                       &kp ESC    &kp Q      &kp W       &kp E          &kp R       &kp T       &kp Y      &kp U    &kp I   &kp O       &kp P     &kp BSPC
-                       &kp TAB    &kp A      &lt SWE S   &lt QNAV D     &lt NAV F   &kp G       &kp H      &kp J    &kp K   &kp L       &SEMI     &kp RET 
-                       &kp LSHFT  &trans     &kp Z       &kp X          &kp C       &kp V       &kp B      &kp N    &kp M   &kp COMMA   &kp DOT   &kp MINUS
-                                                         &kp LCTRL      &kp LALT    &kp LGUI    &kp SPACE  &kp RET  &lt SIGNS 
+                       &kp ESC    &kp Q      &kp W       &kp E          &kp R       &kp T           &kp Y      &kp U      &kp I   &kp O       &kp P     &kp BSPC
+                       &kp TAB    &kp A      &lt SWE S   &lt QNAV D     &lt NAV F   &kp G           &kp H      &kp J      &kp K   &kp L       &SEMI     &kp RET 
+                       &kp LSHFT  &trans     &kp Z       &kp X          &kp C       &kp V           &kp B      &kp N      &kp M   &kp COMMA   &kp DOT   &kp MINUS
+                                                         &kp LCTRL      &kp LALT    &kp LGUI        &kp SPACE  &kp SIGNS  &trans 
                    >;
                };
                  
@@ -82,21 +76,6 @@
                        &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans      &trans      &trans      &trans
                                                 &trans     &trans      &trans      &trans         &trans      &trans
                    >;
-               };
-       
-               coding_layer {
-                   // -----------------------------------------------------------------------------------------
-                   // |      |     |     |     |     |     |   |     |     |     |     |     |  Å   |
-                   // |      |     |     |     |     |     |   |     |     |     |     |  Ö  |  Ä   |
-                   // |      |     |     |     |     |     |   |     |     |     |     |     |      |
-                   //                    |     |     |     |   |     |     |     |
-                   display-name = "Coding";
-                   bindings = <
-                       &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &sv_ao
-                       &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &sv_oe      &sv_ae
-                       &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &trans
-                                               &trans      &trans      &trans      &trans         &trans      &trans
-                   >; 
                };
         };
 };
