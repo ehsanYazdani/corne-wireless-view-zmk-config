@@ -50,7 +50,6 @@
                  
                dev_layer {
                       display-name = "Dev";
-                      display-name = "Dev";
                       bindings = <
                           &trans  &trans   &trans  &trans    &trans   &trans       &kp LPAR   &kp RPAR   &kp KP_MULTIPLY  &kp TILDE  &kp CARET  &kp BSPC
                           &trans  &trans   &trans  &trans    &trans   &trans       &kp LBRC   &kp RBRC   &trans           &kp FSLH   &kp BSLH   &kp GRAVE
