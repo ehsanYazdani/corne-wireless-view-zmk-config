@@ -11,12 +11,6 @@
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/swedish.dtsi"
 
-#define BASE 0
-#define SIGNS 1
-#define NAV 2
-#define QNAV 3
-#define SWE 4
-
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -24,10 +18,10 @@
                default_layer {
                    display-name = "Base";
                    bindings = <
-                       &kp ESC    &kp Q      &kp W       &kp E          &kp R       &kp T           &kp Y      &kp U      &kp I   &kp O       &kp P     &kp BSPC
-                       &kp TAB    &kp A      &lt SWE S   &lt QNAV D     &lt NAV F   &kp G           &kp H      &kp J      &kp K   &kp L       &kp SEMI  &kp RET 
-                       &kp LSHFT  &trans     &kp Z       &kp X          &kp C       &kp V           &kp B      &kp N      &kp M   &kp COMMA   &kp DOT   &kp MINUS
-                                                         &kp LCTRL      &kp LALT    &kp LGUI        &kp SPACE  &lt SIGNS  &trans 
+                       &kp ESC    &kp Q      &kp W       &kp E          &kp R       &kp T           &kp Y      &kp U       &kp I   &kp O       &kp P     &kp BSPC
+                       &kp TAB    &kp A      &lt 4 S     &lt 3 D        &lt 2 F     &kp G           &kp H      &kp J       &kp K   &kp L       &kp SEMI  &kp RET 
+                       &kp LSHFT  &trans     &kp Z       &kp X          &kp C       &kp V           &kp B      &kp N       &kp M   &kp COMMA   &kp DOT   &kp MINUS
+                                                         &kp LCTRL      &kp LALT    &kp LGUI        &kp SPACE  &lt 1 RET   &trans 
                    >;
                };
                  
@@ -78,13 +72,8 @@
                    >;
                };
        
-               swedish_layer {
-                   // -----------------------------------------------------------------------------------------
-                   // |      |     |     |     |     |     |   |     |     |     |     |     |  Å   |
-                   // |      |     |     |     |     |     |   |     |     |     |     |  Ö  |  Ä   |
-                   // |      |     |     |     |     |     |   |     |     |     |     |     |      |
-                   //                    |     |     |     |   |     |     |     |
-                   display-name = "Swedish";
+               coding_layer {
+                   display-name = "Coding";
                    bindings = <
                        &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &sv_ao
                        &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &sv_oe      &sv_ae
