@@ -35,7 +35,7 @@
                        &kp TAB    &kp A   &kp S       &kp D      &kp F      &kp G       &kp H      &kp J  &kp K  &kp L      &kp SEMI  &kp RET
                        &kp LSHFT  &trans  &kp Z       &kp X      &kp C      &kp V       &kp B      &kp N  &kp M  &kp COMMA  &kp DOT   &kp MINUS
                                                       &kp LCTRL  &kp LALT   &kp LGUI    &kp SPACE  &lt SIGNS  &lt DEV
-                   >;
+                               >;
                };
                  
                
@@ -52,24 +52,24 @@
                        &trans      &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4)  &kp LS(N5)    &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp QMARK
                        &trans      &kp N1     &kp N2     &kp N3     &kp N4      &kp N5        &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp PLUS
                                                          &trans     &trans      &trans        &trans      &trans      &trans
-                   >;
+                           >;
                };
                        
                
                dev_layer {
-                          // -----------------------------------------------------------------------------------------
-                          // |      |     |     |     |     |     |   |  (  |  )  |  *  |  ~  |  ^  | BKSP |
-                          // |      |     |     |     |     |     |   |  {  |  }  |     |  /  |  \  |  `   |
-                          // |      |     |     |     |     |     |   |  [  |  ]  |     |     | "|" |  '   |
-                          //                    |     |     |     |   |     |     |     |
-
-                  display-name = "Dev";
-                  bindings = <
-                      &trans      &trans     &kp AT     &trans     &kp DLLR    &kp N5        &trans      &kp PIPE    &kp LBKT    &kp RBKT    &trans      &trans
-                      &trans      &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4)  &kp LS(N5)    &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp QMARK
-                      &trans      &kp N1     &kp N2     &kp N3     &kp N4      &kp N5        &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp PLUS
-                                                        &trans     &trans      &trans        &trans      &trans      &trans
-                  >;
-              };
+                           // -----------------------------------------------------------------------------------------
+                           // |      |     |     |     |     |     |   |  (  |  )  |  *  |  ~  |  ^  | BKSP |
+                           // |      |     |     |     |     |     |   |  {  |  }  |     |  /  |  \  |  `   |
+                           // |      |     |     |     |     |     |   |  [  |  ]  |     |     | "|" |  '   |
+                           //                    |     |     |     |   |     |     |     |
+               
+                   display-name = "Dev";
+                   bindings = <
+                       &trans  &trans   &trans  &trans   &trans   &trans       &trans   &trans   &trans  &trans  &trans  &trans
+                       &trans  &trans   &trans  &trans   &trans   &trans       &trans   &trans   &trans  &trans  &trans  &trans
+                       &trans  &trans   &trans  &trans   &trans   &trans       &trans   &trans   &trans  &trans  &trans  &trans
+                                                &trans   &trans   &trans       &trans   &trans   &trans
+                               >;
+                       };
         };
 };
