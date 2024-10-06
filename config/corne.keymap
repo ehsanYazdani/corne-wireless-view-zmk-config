@@ -102,17 +102,17 @@
                
                coding_layer {
                   // -----------------------------------------------------------------------------------------
-                  // |      |     |     |     |     |     |   |     |     |     |     |     |  Å   |
-                  // |      |     |     |     |     |     |   |     |     |     |     |  Ö  |  Ä   |
-                  // |      |     |     |     |     |     |   |     |     |     |     |     |      |
+                  // |      |     |     |     |     |     |   |     |     |     |     |     |     |
+                  // |      |     |     |     |     |     |   |     |     |     |     |     |     |
+                  // |      |     |     |     |     |     |   |     |     |     |     |     |     |
                   //                    |     |     |     |   |     |     |     |
                   display-name = "Coding";
                   bindings = <
-                      &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &sv_ao
-                      &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &sv_oe      &sv_ae
+                      &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &trans
+                      &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &trans
                       &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &trans
                                               &trans      &trans      &trans      &trans         &trans      &trans
                   >; 
-               };
+              };
         };
 };
