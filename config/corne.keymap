@@ -73,11 +73,16 @@
                };
        
                coding_layer {
+                    // -----------------------------------------------------------------------------------------
+                    // |      |     |     |     |     |     |   |  (  |  )  |  *  |  ~  |  ^  | BKSP |
+                    // |      |     |     |     |     |     |   |  {  |  }  |     |  /  |  \  |  `   |
+                    // |      |     |     |     |     |     |   |  [  |  ]  |     |     | "|" |  '   |
+                    //                    |     |     |     |   |     |     |     |               
                    display-name = "Coding";
                    bindings = <
-                          &trans  &trans   &trans   &trans   &trans   &trans       &kp LPAR   &kp RPAR   &kp KP_MULTIPLY  &TILDE    &kp CARET  &kp BSPC
-                          &trans  &trans   &trans   &trans   &trans   &trans       &kp LBRC   &kp RBRC   &trans           &kp FSLH  &kp BSLH   &kp GRAVE
-                          &trans  &trans   &trans   &trans   &trans   &trans       &kp LBKT   &kp RBKT   &trans           &trans    &kp PIPE   &kp SQT
+                          &trans  &trans   &trans   &trans   &trans   &trans       &kp LPAR   &kp RPAR   &kp KP_MULTIPLY  &kp TILDE  &kp CARET  &trans
+                          &trans  &trans   &trans   &trans   &trans   &trans       &kp LBRC   &kp RBRC   &trans           &kp FSLH   &kp BSLH   &kp GRAVE
+                          &trans  &trans   &trans   &trans   &trans   &trans       &kp LBKT   &kp RBKT   &trans           &trans     &kp PIPE   &kp SQT
                                                     &trans   &trans   &trans       &trans     &trans     &trans
                    >; 
                };
