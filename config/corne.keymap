@@ -15,7 +15,7 @@
 #define SIGNS 1
 #define NAV 2
 #define QNAV 3
-#define CODING 4
+#define SWE 4
 
 / {
         keymap {
@@ -24,10 +24,10 @@
                default_layer {
                    display-name = "Base";
                    bindings = <
-                       &kp ESC    &kp Q      &kp W          &kp E          &kp R       &kp T           &kp Y      &kp U      &kp I   &kp O       &kp P     &kp BSPC
-                       &kp TAB    &kp A      &lt CODING S   &lt QNAV D     &lt NAV F   &kp G           &kp H      &kp J      &kp K   &kp L       &kp SEMI  &kp RET 
-                       &kp LSHFT  &trans     &kp Z          &kp X          &kp C       &kp V           &kp B      &kp N      &kp M   &kp COMMA   &kp DOT   &kp MINUS
-                                                            &kp LCTRL      &kp LALT    &kp LGUI        &kp SPACE  &lt SIGNS  &kp RET 
+                       &kp ESC    &kp Q      &kp W       &kp E          &kp R       &kp T           &kp Y      &kp U      &kp I   &kp O       &kp P     &kp BSPC
+                       &kp TAB    &kp A      &lt SWE S   &lt QNAV D     &lt NAV F   &kp G           &kp H      &kp J      &kp K   &kp L       &kp SEMI  &kp RET 
+                       &kp LSHFT  &trans     &kp Z       &kp X          &kp C       &kp V           &kp B      &kp N      &kp M   &kp COMMA   &kp DOT   &kp MINUS
+                                                         &kp LCTRL      &kp LALT    &kp LGUI        &kp SPACE  &lt SIGNS  &trans 
                    >;
                };
                  
@@ -48,16 +48,16 @@
                    >;
                };
                
-                nav_and_swedish_layer {
+                nav_layer {
                    // -----------------------------------------------------------------------------------------
                    // |      |     |     |     |     |     |   |     |     | UP  |     |     |      |
                    // |      |     |     |     |     |     |   |     | LEFT| DOWN|RIGHT|     |      |
                    // |      |     |     |     |     |     |   |     |     |     |     |     |      |
                    //                    |     |     |     |   |     |     |     |
-                   display-name = "Navigation and swedish";
+                   display-name = "Navigation";
                    bindings = <
-                       &trans      &trans      &trans      &trans      &trans      &trans     &trans     &trans      &kp UP     &trans      &trans      &sv_ao
-                       &trans      &trans      &trans      &trans      &trans      &trans     &trans     &kp LEFT    &kp DOWN   &kp RIGHT   &sv_oe      &sv_ae
+                       &trans      &trans      &trans      &trans      &trans      &trans     &trans     &trans      &kp UP     &trans      &trans      &trans
+                       &trans      &trans      &trans      &trans      &trans      &trans     &trans     &kp LEFT    &kp DOWN   &kp RIGHT   &trans      &trans
                        &trans      &trans      &trans      &trans      &trans      &trans     &trans     &trans      &trans     &trans      &trans      &trans
                                                 &trans     &trans      &trans      &trans     &trans     &trans
                    >;
@@ -78,20 +78,34 @@
                    >;
                };
        
-               dev_layer {
-                           // -----------------------------------------------------------------------------------------
-                           // |      |     |     |     |     |     |   |  (  |  )  |  *  |  ~  |  ^  | BKSP |
-                           // |      |     |     |     |     |     |   |  {  |  }  |     |  /  |  \  |  `   |
-                           // |      |     |     |     |     |     |   |  [  |  ]  |     |     | "|" |  '   |
-                           //                    |     |     |     |   |     |     |     |
-               
-                   display-name = "Dev";
+               swedish_layer {
+                   // -----------------------------------------------------------------------------------------
+                   // |      |     |     |     |     |     |   |     |     |     |     |     |  Å   |
+                   // |      |     |     |     |     |     |   |     |     |     |     |  Ö  |  Ä   |
+                   // |      |     |     |     |     |     |   |     |     |     |     |     |      |
+                   //                    |     |     |     |   |     |     |     |
+                   display-name = "Swedish";
                    bindings = <
-                           &trans  &trans   &trans  &trans    &trans   &trans            &kp LPAR   &kp RPAR   &kp KP_MULTIPLY  &kp TILDE  &kp CARET  &trans
-                           &trans  &trans   &trans  &trans    &trans   &trans            &kp LBRC   &kp RBRC   &trans           &kp FSLH   &kp BSLH   &kp GRAVE
-                           &trans  &trans   &trans  &trans    &trans   &trans            &kp LBKT   &kp RBKT   &trans           &trans     &kp PIPE   &kp SQT
-                                                    &trans    &trans    &trans           &trans     &trans     &trans
-                   >;
+                       &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &sv_ao
+                       &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &sv_oe      &sv_ae
+                       &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &trans
+                                               &trans      &trans      &trans      &trans         &trans      &trans
+                   >; 
+               };
+               
+               coding_layer {
+                  // -----------------------------------------------------------------------------------------
+                  // |      |     |     |     |     |     |   |     |     |     |     |     |  Å   |
+                  // |      |     |     |     |     |     |   |     |     |     |     |  Ö  |  Ä   |
+                  // |      |     |     |     |     |     |   |     |     |     |     |     |      |
+                  //                    |     |     |     |   |     |     |     |
+                  display-name = "Coding";
+                  bindings = <
+                      &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &sv_ao
+                      &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &sv_oe      &sv_ae
+                      &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &trans
+                                              &trans      &trans      &trans      &trans         &trans      &trans
+                  >; 
                };
         };
 };
