@@ -77,6 +77,19 @@
                    >;
                };
        
-               
+              swedish_layer {
+                 // -----------------------------------------------------------------------------------------
+                 // |      |     |     |     |     |     |   |     |     |     |     |     |  Å   |
+                 // |      |     |     |     |     |     |   |     |     |     |     |  Ö  |  Ä   |
+                 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
+                 //                    |     |     |     |   |     |     |     |
+                 display-name = "Swedish layer";
+                 bindings = <
+                     &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &sv_ao
+                     &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &sv_oe      &sv_ae
+                     &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &trans
+                                             &trans      &trans      &trans      &trans         &trans      &trans
+                 >; 
+              };
         };
 };
