@@ -98,5 +98,20 @@
                                                &trans      &trans      &trans      &trans         &trans      &trans
                    >; 
                };
+               
+               swedish_layer2 {
+                      // -----------------------------------------------------------------------------------------
+                      // |      |     |     |     |     |     |   |     |     |     |     |     |     |
+                      // |      |     |     |     |     |     |   |     |     |     |     |     |     |
+                      // |      |     |     |     |     |     |   |     |     |     |     |     |      |
+                      //                    |     |     |     |   |     |     |     |
+                      display-name = "Swe2";
+                      bindings = <
+                          &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &trans
+                          &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &trans
+                          &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans     &trans      &trans      &trans
+                                                  &trans      &trans      &trans      &trans         &trans      &trans
+                      >; 
+                  };
         };
 };
