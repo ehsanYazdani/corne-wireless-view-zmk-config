@@ -19,7 +19,7 @@
 
 / {
         keymap {
-                compatible = "zmk,keymap";
+               compatible = "zmk,keymap";
 
                default_layer {
                    display-name = "Base";
@@ -38,14 +38,13 @@
                            // |     |  !  |  "  |  #   |  €  |  %  |   |  &  |  /  |  (  |  )  |  =  |  ?  |
                            // |     |  1  |  2  |  3   |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  +  |
                            //                   |      |     |     |   |     |     |     |
-               
-               display-name = "Signs";
-               bindings = <
-                       &trans      &trans     &kp AT      &trans      &kp DLLR    &kp N5        &trans      &kp PIPE    &kp LBKT    &kp RBKT    &trans      &trans
-                       &trans      &kp LS(N1) &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)    &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp QMARK
-                       &trans      &kp N1     &kp N2      &kp N3      &kp N4      &kp N5        &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp PLUS
-                                                          &trans      &trans      &trans        &trans      &trans      &trans
-                   >;
+                   display-name = "Signs";
+                   bindings = <
+                           &trans      &trans     &kp AT      &trans      &kp DLLR    &kp N5        &trans      &kp PIPE    &kp LBKT    &kp RBKT    &trans      &trans
+                           &trans      &kp LS(N1) &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)    &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp QMARK
+                           &trans      &kp N1     &kp N2      &kp N3      &kp N4      &kp N5        &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp PLUS
+                                                              &trans      &trans      &trans        &trans      &trans      &trans
+                       >;
                };
                
                 nav_and_swedish_layer {
@@ -78,20 +77,6 @@
                    >;
                };
        
-               dev_layer {
-                           // -----------------------------------------------------------------------------------------
-                           // |      |     |     |     |     |     |   |  (  |  )  |  *  |  ~  |  ^  | BKSP |
-                           // |      |     |     |     |     |     |   |  {  |  }  |     |  /  |  \  |  `   |
-                           // |      |     |     |     |     |     |   |  [  |  ]  |     |     | "|" |  '   |
-                           //                    |     |     |     |   |     |     |     |
                
-                   display-name = "Dev";
-                   bindings = <
-                           &trans  &trans   &trans  &trans    &trans   &trans            &kp LPAR   &kp RPAR   &kp KP_MULTIPLY  &kp TILDE  &kp CARET  &trans
-                           &trans  &trans   &trans  &trans    &trans   &trans            &kp LBRC   &kp RBRC   &trans           &kp FSLH   &kp BSLH   &kp GRAVE
-                           &trans  &trans   &trans  &trans    &trans   &trans            &kp LBKT   &kp RBKT   &trans           &trans     &kp PIPE   &kp SQT
-                                                    &trans    &trans    &trans           &trans     &trans     &trans
-                   >;
-               };
         };
 };
