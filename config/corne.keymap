@@ -49,7 +49,7 @@
                    // |      |     |     |     |     |     |   |     | LEFT| DOWN|RIGHT|  Ö  |  Ä  |
                    // |      |     |     |     |     |     |   |     |     |     |     |     |     |
                    //                    |     |     |     |   |     |     |     |
-                   display-name = "Navigation";
+                   display-name = "Nav";
                    bindings = <
                        &trans      &trans      &trans      &trans      &trans      &trans     &trans     &trans      &kp UP     &trans      &trans      &sv_ao
                        &trans      &trans      &trans      &trans      &trans      &trans     &trans     &kp LEFT    &kp DOWN   &kp RIGHT   &sv_oe      &sv_ae
@@ -64,7 +64,7 @@
                    // |      |     |     |     |     |     |   |     | HOME | PGDOWN | END  |     |      |
                    // |      |     |     |     |     |     |   |     |      |        |      |     |      |
                    //                    |     |     |     |   |     |      |        |
-                   display-name = "Quick Navigation";
+                   display-name = "QNav";
                    bindings = <
                        &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &kp PG_UP   &trans      &trans      &trans
                        &trans      &trans      &trans      &trans      &trans      &trans         &trans      &kp HOME    &kp PG_DN   &kp END     &trans      &trans
@@ -79,7 +79,7 @@
                     // |      |     |     |     |     |     |   |     |  {  |   } |  /  |  \  |  `   |
                     // |      |     |     |     |     |     |   |     |  [  |  ]  |     | "|" |  '   |
                     //                    |     |     |     |   |     |     |     |               
-                   display-name = "Coding";
+                   display-name = "Dev";
                    bindings = <
                           &trans  &trans   &trans   &trans   &trans   &trans       &kp KP_MULTIPLY   &kp LPAR   &kp RPAR    &kp TILDE  &kp CARET  &trans
                           &trans  &trans   &trans   &trans   &trans   &trans       &trans            &kp LBRC   &kp RBRC    &kp FSLH   &kp BSLH   &kp GRAVE
