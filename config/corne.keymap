@@ -13,6 +13,10 @@
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/swedish.dtsi"
 
+&lt {
+    tapping-term-ms = <300>;
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
