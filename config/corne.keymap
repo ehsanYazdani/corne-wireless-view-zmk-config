@@ -81,16 +81,16 @@
 
         coding_layer {
             // -----------------------------------------------------------------------------------------
-            // |      |     |     |     |     |     |   |  *  |  )  |  )  |  ~  |  ^  | BKSP |
+            // |      |     |     |     |     |     |   |  *  |  (  |  )  |  =  |  ^  | BKSP |
             // |      |     |     |     |     |     |   |  $  |  {  |   } |  /  |  \  |  `   |
-            // |      |     |     |     |     |     |   |     |  [  |  ]  | "|" |  "  |  '   |
+            // |      |     |     |     |     |     |   |  ~  |  [  |  ]  | "|" |  "  |  '   |
             //                    |     |     |     |   |     |     |     |               
 
             display-name = "Dev";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE  &kp CARET          &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp EQUAL  &kp CARET          &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp DLLR         &kp LBRC  &kp RBRC  &kp FSLH   &kp BSLH           &kp GRAVE
-&trans  &trans  &trans  &trans  &trans  &trans    &trans           &kp LBKT  &kp RBKT  &kp PIPE   &kp DOUBLE_QUOTES  &kp SQT
+&trans  &trans  &trans  &trans  &trans  &trans    &kp TILDE        &kp LBKT  &kp RBKT  &kp PIPE   &kp DOUBLE_QUOTES  &kp SQT
                         &trans  &trans  &trans    &trans           &trans    &trans
             >;
         };
