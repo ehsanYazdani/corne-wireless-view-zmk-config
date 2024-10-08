@@ -9,83 +9,86 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define HOST_OS 2
+
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/swedish.dtsi"
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-               default_layer {
-                   display-name = "Base";
-                   bindings = <
-                       &kp ESC    &kp Q      &kp W       &kp E          &kp R       &kp T           &kp Y      &kp U       &kp I   &kp O       &kp P     &kp BSPC
-                       &kp TAB    &kp A      &lt 4 S     &lt 3 D        &lt 2 F     &kp G           &kp H      &kp J       &kp K   &kp L       &kp SEMI  &kp RET 
-                       &kp LSHFT  &trans     &kp Z       &kp X          &kp C       &kp V           &kp B      &kp N       &kp M   &kp COMMA   &kp DOT   &kp MINUS
-                                                         &kp LCTRL      &kp LALT    &kp LGUI        &kp SPACE  &lt 1 RET   &trans 
-                   >;
-               };
-                 
-               
-               signs_layer {
-                           // -----------------------------------------------------------------------------------------
-                           // |     |     |  @  |      |  $  |     |   |     | "|" |  [  |  ]  |     |     |
-                           // |     |  !  |  "  |  #   |  €  |  %  |   |  &  |  /  |  (  |  )  |  =  |  ?  |
-                           // |     |  1  |  2  |  3   |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  +  |
-                           //                   |      |     |     |   |     |     |     |
-               
-               display-name = "Signs";
-               bindings = <
-                       &trans      &trans     &kp AT      &trans      &kp DLLR    &kp N5        &trans      &kp PIPE    &kp LBKT    &kp RBKT    &trans      &trans
-                       &trans      &kp LS(N1) &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)    &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp QMARK
-                       &trans      &kp N1     &kp N2      &kp N3      &kp N4      &kp N5        &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp PLUS
-                                                          &trans      &trans      &trans        &trans      &trans      &trans
-                   >;
-               };
-               
-                nav_layer {
-                   // -----------------------------------------------------------------------------------------
-                   // |      |     |     |     |     |     |   |     |     | UP  |     |     |  Å  |
-                   // |      |     |     |     |     |     |   |     | LEFT| DOWN|RIGHT|  Ö  |  Ä  |
-                   // |      |     |     |     |     |     |   |     |     |     |     |     |     |
-                   //                    |     |     |     |   |     |     |     |
-                   display-name = "Nav";
-                   bindings = <
-                       &trans      &trans      &trans      &trans      &trans      &trans     &trans     &trans      &kp UP     &trans      &trans      &sv_ao
-                       &trans      &trans      &trans      &trans      &trans      &trans     &trans     &kp LEFT    &kp DOWN   &kp RIGHT   &sv_oe      &sv_ae
-                       &trans      &trans      &trans      &trans      &trans      &trans     &trans     &trans      &trans     &trans      &trans      &trans
-                                                &trans     &trans      &trans      &trans     &trans     &trans
-                   >;
-               };
-       
-               qnav_layer {
-                   // -----------------------------------------------------------------------------------------
-                   // |      |     |     |     |     |     |   |     |      | PGUP   |      |     |      |
-                   // |      |     |     |     |     |     |   |     | HOME | PGDOWN | END  |     |      |
-                   // |      |     |     |     |     |     |   |     |      |        |      |     |      |
-                   //                    |     |     |     |   |     |      |        |
-                   display-name = "QNav";
-                   bindings = <
-                       &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &kp PG_UP   &trans      &trans      &trans
-                       &trans      &trans      &trans      &trans      &trans      &trans         &trans      &kp HOME    &kp PG_DN   &kp END     &trans      &trans
-                       &trans      &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans      &trans      &trans      &trans
-                                                &trans     &trans      &trans      &trans         &trans      &trans
-                   >;
-               };
-       
-               coding_layer {
-                    // -----------------------------------------------------------------------------------------
-                    // |      |     |     |     |     |     |   |  *  |  )  |  )  |  ~  |  ^  | BKSP |
-                    // |      |     |     |     |     |     |   |     |  {  |   } |  /  |  \  |  `   |
-                    // |      |     |     |     |     |     |   |     |  [  |  ]  |     | "|" |  '   |
-                    //                    |     |     |     |   |     |     |     |               
-                   display-name = "Dev";
-                   bindings = <
-                          &trans  &trans   &trans   &trans   &trans   &trans       &kp KP_MULTIPLY   &kp LPAR   &kp RPAR    &kp TILDE  &kp CARET  &trans
-                          &trans  &trans   &trans   &trans   &trans   &trans       &trans            &kp LBRC   &kp RBRC    &kp FSLH   &kp BSLH   &kp GRAVE
-                          &trans  &trans   &trans   &trans   &trans   &trans       &trans            &kp LBKT   &kp RBKT    &trans     &kp PIPE   &kp SQT
-                                                    &trans   &trans   &trans       &trans            &trans     &trans
-                   >; 
-               };
+        default_layer {
+            display-name = "Base";
+            bindings = <
+&kp ESC    &kp Q   &kp W    &kp E      &kp R     &kp T       &kp Y      &kp U      &kp I   &kp O      &kp P     &kp BSPC
+&kp TAB    &kp A   &lt 4 S  &lt 3 D    &lt 2 F   &kp G       &kp H      &kp J      &kp K   &kp L      &kp SEMI  &kp RET
+&kp LSHFT  &trans  &kp Z    &kp X      &kp C     &kp V       &kp B      &kp N      &kp M   &kp COMMA  &kp DOT   &kp MINUS
+                            &kp LCTRL  &kp LALT  &kp LGUI    &kp SPACE  &lt 1 RET  &trans
+            >;
         };
+
+        signs_layer {
+            // -----------------------------------------------------------------------------------------
+            // | F1 |  F2 |  F3 |  F4 |  F5 |  F6 |   | F7  |  F8 |  F9 | F10 | F11 | F12 |
+            // |    |  !  |  "  |  #  |  $  |  %  |   |  &  |  /  |  (  |  )  |  =  |  ?  |
+            // |    |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  +  |
+            //                  |     |     |     |   |     |     |     |
+
+            display-name = "Signs";
+            bindings = <
+&kp F1  &kp F2      &kp F3      &kp F4      &kp F5      &kp F6        &kp F7      &kp F8      &kp F9      &kp F10     &kp F11     &kp F12
+&trans  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)    &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp QMARK
+&trans  &kp N1      &kp N2      &kp N3      &kp N4      &kp N5        &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp PLUS
+                                &trans      &trans      &trans        &trans      &trans      &trans
+            >;
+        };
+
+        nav_layer {
+            // -----------------------------------------------------------------------------------------
+            // |      |     |     |     |     |     |   |     |     | UP  |     |     |  Å  |
+            // |      |     |     |     |     |     |   |     | LEFT| DOWN|RIGHT|  Ö  |  Ä  |
+            // |      |     |     |     |     |     |   |     |     |     |     |     |     |
+            //                    |     |     |     |   |     |     |     |
+
+            display-name = "Nav";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp UP    &trans     &trans  &sv_ao
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &sv_oe  &sv_ae
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans     &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans    &trans
+            >;
+        };
+
+        qnav_layer {
+            // -----------------------------------------------------------------------------------------
+            // |      |     |     |     |     |     |   |     |      | PGUP   |      |     |      |
+            // |      |     |     |     |     |     |   |     | HOME | PGDOWN | END  |     |      |
+            // |      |     |     |     |     |     |   |     |      |        |      |     |      |
+            //                    |     |     |     |   |     |      |        |
+
+            display-name = "QNav";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp PG_UP  &trans   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp HOME  &kp PG_DN  &kp END  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans     &trans   &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans    &trans
+            >;
+        };
+
+        coding_layer {
+            // -----------------------------------------------------------------------------------------
+            // |      |     |     |     |     |     |   |  *  |  )  |  )  |  ~  |  ^  | BKSP |
+            // |      |     |     |     |     |     |   |  $  |  {  |   } |  /  |  \  |  `   |
+            // |      |     |     |     |     |     |   |     |  [  |  ]  | "|" |  "  |  '   |
+            //                    |     |     |     |   |     |     |     |               
+
+            display-name = "Dev";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE  &kp CARET          &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp DLLR         &kp LBRC  &kp RBRC  &kp FSLH   &kp BSLH           &kp GRAVE
+&trans  &trans  &trans  &trans  &trans  &trans    &trans           &kp LBKT  &kp RBKT  &kp PIPE   &kp DOUBLE_QUOTES  &kp SQT
+                        &trans  &trans  &trans    &trans           &trans    &trans
+            >;
+        };
+    };
 };
