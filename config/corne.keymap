@@ -13,10 +13,6 @@
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/swedish.dtsi"
 
-&mt {
-    tapping-term-ms = <300>;
-};
-
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -25,9 +21,9 @@
             display-name = "Base";
             bindings = <
 &trans       &kp Q    &kp W    &kp E      &kp R     &kp T       &kp Y      &kp U      &kp I   &kp O      &kp P     &kp BSPC
-&kp LSHFT    &kp A    &mt 4 S  &mt 3 D    &mt 2 F   &kp G       &kp H      &kp J      &kp K   &kp L      &kp SEMI  &kp RET
+&kp LSHFT    &kp A    &lt 4 S  &lt 3 D    &lt 2 F   &kp G       &kp H      &kp J      &kp K   &kp L      &kp SEMI  &kp RET
 &kp ESC      &trans   &kp Z    &kp X      &kp C     &kp V       &kp B      &kp N      &kp M   &kp COMMA  &kp DOT   &kp MINUS
-                               &kp LCTRL  &kp LALT  &kp LGUI    &kp SPACE  &mt 1 RET  &trans
+                               &kp LCTRL  &kp LALT  &kp LGUI    &kp SPACE  &lt 1 RET  &trans
             >;
         };
 
